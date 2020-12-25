@@ -1,5 +1,5 @@
 # T-Rex-Runner-VHDL-BASYS3
-An implementation of Chrome Browser's T-Rex Runner game in VHDL. Incomplete, this is a work-in-progress. Display on VGA monitor via the VGA port.
+An implementation of Chrome Browser's T-Rex Runner game in VHDL. Incomplete, this is a work-in-progress. Display on VGA monitor via the VGA port. See sample video.
 
 Currently, the T-rex can run, duck and jump. There also exists a single cacti that can be moved around using the left and right push-buttons on the FPGA. A single visual bit also exists on screen that turns '1' when the cacti touches the T-Rex, and '0' otherwise. This is meant to test whether contact is being detected precisely- and it does. This is just where the project is at so far.
 
