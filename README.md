@@ -1,5 +1,5 @@
 # T-Rex-Runner-VHDL-BASYS3
-![alt text](https://github.com/taheranjary/T-Rex-Runner-VHDL-BASYS3/blob/main/Screenshot_1.png?raw=true)
+
 An implementation of Chrome Browser's T-Rex Runner game in VHDL. Incomplete, this is a work-in-progress. Display on VGA monitor via the VGA port. See demo video.
 
 Currently, the T-rex can run, duck and jump. There also exists a single cacti that can be moved around using the left and right push-buttons on the FPGA. A single visual bit also exists on screen that turns '1' when the cacti touches the T-Rex, and '0' otherwise. This is meant to test whether contact is being detected precisely- and it does. This is just where the project is at so far.
@@ -11,3 +11,5 @@ Jump physics are implemented as well, along with physics description that lets t
 Currently compatible on BASYS3 FPGA. VGA protocols implemented as well. All VIVADO files are in /TRex_v1.6.
 
 A small java file is also given in /Sprite Maker. This is what I use to convert an image(of the T-rex, for example) to a binary array, to be used as a Sprite, to be stored in the 'ROM' module.
+
+![alt text](https://github.com/taheranjary/T-Rex-Runner-VHDL-BASYS3/blob/main/Screenshot_1.png?raw=true)
