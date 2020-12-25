@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Mar 19 10:58:19 2018
+# Process ID: 9560
+# Current directory: C:/Users/t.anjary/Desktop/Personal Project/vcurrent
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8536 C:\Users\t.anjary\Desktop\Personal Project\vcurrent\VGA_trial.xpr
+# Log file: C:/Users/t.anjary/Desktop/Personal Project/vcurrent/vivado.log
+# Journal file: C:/Users/t.anjary/Desktop/Personal Project/vcurrent\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx3/Vivado/2017.3/data/ip'.
+open_project: Time (s): cpu = 00:00:44 ; elapsed = 00:00:24 . Memory (MB): peak = 760.645 ; gain = 58.078
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Mar 19 11:02:25 2018] Launched synth_1...
+Run output will be captured here: C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.runs/synth_1/runme.log
+[Mon Mar 19 11:02:25 2018] Launched impl_1...
+Run output will be captured here: C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 19 11:24:41 2018...

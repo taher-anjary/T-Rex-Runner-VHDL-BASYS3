@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Mon Mar 19 10:58:19 2018
+# Process ID: 9560
+# Current directory: C:/Users/t.anjary/Desktop/Personal Project/vcurrent
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8536 C:\Users\t.anjary\Desktop\Personal Project\vcurrent\VGA_trial.xpr
+# Log file: C:/Users/t.anjary/Desktop/Personal Project/vcurrent/vivado.log
+# Journal file: C:/Users/t.anjary/Desktop/Personal Project/vcurrent\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Fri Mar 23 21:15:22 2018
+# Process ID: 10936
+# Current directory: C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.runs/synth_1
+# Command line: vivado.exe -log VGA.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA.tcl
+# Log file: C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.runs/synth_1/VGA.vds
+# Journal file: C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source VGA.tcl -notrace

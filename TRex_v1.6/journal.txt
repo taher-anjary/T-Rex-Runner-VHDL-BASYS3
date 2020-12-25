@@ -1,0 +1,39 @@
+-double jump sequence "working"
+-glitch with second jump
+-attempted to rewrite conditions by considering the one cycle delay
+ in updating ome signals-untested
+-working well...need to make code more efficient
+--------------
+- moved sprites into separate package, also created type sprite_block
+- wrote efficient code for multiple jumps. jumps are now unlimited though
+- consider using two clocks, one for checking the button, another
+  for animatingg the jump
+- working
+---------------
+- two clocks implemented-- working
+--------
+- all working so far
+-----------
+- added air and duck sprites--done
+- think about layering sprites, the black parts could cover the 
+  sprite behind <-- solved by if statement
+-------------
+- used an if statement so it  only draws where the sprite element
+  is non zero <--- working
+- used 55 pixels sprites <-- working
+-------------------
+- pix55 constnat inside package ----- +
+- alphanumeric sprites + separate package ----- +
+- contact ----- / works once
+- move hazard along x axis ----- +
+- full clock divider ------ +
+----------------------------------------
+- contact: 
+   - reset led contact_boolean to zero just before 
+     drawing the trex ------ +
+   - reset contact sprite to zero 
+     right after drawing it. ------- +
+-------------------------------------------
+- need to make duck button make the trex to sprint to ground:
+- ground added with animated kink ------- +
+  jump_d <= jump_d - 20 at each clock cycle

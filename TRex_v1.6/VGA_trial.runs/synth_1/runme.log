@@ -1,0 +1,691 @@
+
+*** Running vivado
+    with args -log VGA.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA.tcl
+
+
+****** Vivado v2017.3 (64-bit)
+  **** SW Build 2018833 on Wed Oct  4 19:58:22 MDT 2017
+  **** IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source VGA.tcl -notrace
+Command: synth_design -top VGA -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4208 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 344.477 ; gain = 100.797
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/VGA.vhd:17]
+INFO: [Synth 8-3491] module 'SYNC' declared at 'C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:8' bound to instance 'C1' of component 'SYNC' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/VGA.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'SYNC' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:21]
+INFO: [Synth 8-3491] module 'clock' declared at 'C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/Clock.vhd:7' bound to instance 'clock_1_map' of component 'clock' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'clock' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/Clock.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'clock' (1#1) [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/Clock.vhd:13]
+WARNING: [Synth 8-614] signal 'clock_1' is read in the process but is not in the sensitivity list [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:65]
+WARNING: [Synth 8-5787] Register initial_d_reg in module SYNC is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:67]
+WARNING: [Synth 8-5787] Register jump_t_reg in module SYNC is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:67]
+WARNING: [Synth 8-5787] Register initial_d_reg in module SYNC is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'SYNC' (2#1) [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (3#1) [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/VGA.vhd:17]
+WARNING: [Synth 8-3331] design SYNC has unconnected port KEYS[1]
+WARNING: [Synth 8-3331] design SYNC has unconnected port KEYS[0]
+WARNING: [Synth 8-3331] design SYNC has unconnected port S[1]
+WARNING: [Synth 8-3331] design SYNC has unconnected port S[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 447.180 ; gain = 203.500
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 447.180 ; gain = 203.500
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/VGA_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/VGA_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 764.055 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 764.055 ; gain = 520.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 764.055 ; gain = 520.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 764.055 ; gain = 520.375
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "temp2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "temp" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/Clock.vhd:22]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[0,1][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[0,2][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[0,4][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[0,6][2:0]' into 'contact_check_reg[0,5][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[0,7][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[0,8][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[0,9][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[0,10][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,0][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,1][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,2][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,3][2:0]' into 'contact_check_reg[0,5][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,4][2:0]' into 'contact_check_reg[0,5][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,5][2:0]' into 'contact_check_reg[0,5][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,6][2:0]' into 'contact_check_reg[0,5][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,7][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,8][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,9][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[1,10][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[2,0][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[2,1][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[2,2][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[2,3][2:0]' into 'contact_check_reg[0,5][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[2,5][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[2,6][2:0]' into 'contact_check_reg[0,5][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[2,7][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[2,8][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[2,9][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[2,10][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,0][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,1][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,2][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,3][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,4][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,5][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,6][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,7][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,8][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,9][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[3,10][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,0][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,1][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,2][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,3][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,4][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,5][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,6][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,7][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,8][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,9][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[4,10][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,0][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,1][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,2][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,3][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,4][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,5][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,6][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,7][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,8][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,9][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[5,10][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,0][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,1][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,2][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,3][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,4][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,5][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,6][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,7][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,8][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,9][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[6,10][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,0][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,1][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,2][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,3][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,4][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,5][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,6][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,7][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,8][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,9][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[7,10][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,0][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,1][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,2][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,3][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,4][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,5][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,6][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,7][2:0]' into 'contact_check_reg[0,3][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,8][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,9][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[8,10][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[9,0][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[9,1][2:0]' into 'contact_check_reg[0,0][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[9,2][2:0]' into 'contact_check_reg[2,4][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[9,3][2:0]' into 'contact_check_reg[0,5][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Synth 8-4471] merging register 'contact_check_reg[9,4][2:0]' into 'contact_check_reg[0,5][2:0]' [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[0,1] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[0,2] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[0,4] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[0,6] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[0,7] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[0,8] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[0,9] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[0,10] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,0] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,1] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,2] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,3] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,4] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,5] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,6] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,7] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,8] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,9] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[1,10] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[2,0] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[2,1] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[2,2] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[2,3] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[2,5] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[2,6] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[2,7] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[2,8] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[2,9] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[2,10] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,0] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,1] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,2] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,3] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,4] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,5] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,6] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,7] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,8] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,9] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[3,10] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,0] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,1] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,2] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,3] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,4] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,5] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,6] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,7] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,8] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,9] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[4,10] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,0] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,1] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,2] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,3] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,4] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,5] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,6] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,7] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,8] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,9] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[5,10] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,0] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,1] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,2] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,3] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,4] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,5] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,6] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,7] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,8] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,9] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[6,10] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,0] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,1] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,2] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,3] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,4] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,5] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,6] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,7] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,8] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,9] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[7,10] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,0] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,1] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,2] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,3] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,4] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,5] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,6] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,7] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,8] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,9] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[8,10] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[9,0] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[9,1] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[9,2] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+WARNING: [Synth 8-6014] Unused sequential element contact_check_reg[9,3] was removed.  [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:167]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:187]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:138]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:187]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:138]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:187]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:138]
+INFO: [Synth 8-5546] ROM "kinks_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "trex_contact" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 764.055 ; gain = 520.375
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
+	   4 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 5     
+	   3 Input     12 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 6     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 5     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 6     
++---Multipliers : 
+	                 6x32  Multipliers := 1     
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 5     
+	   2 Input     12 Bit        Muxes := 9     
+	   4 Input     12 Bit        Muxes := 4     
+	   8 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 5     
+	  55 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  55 Input      3 Bit        Muxes := 13    
+	   3 Input      3 Bit        Muxes := 4     
+	  11 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 1     
+	  55 Input      2 Bit        Muxes := 29    
+	   2 Input      2 Bit        Muxes := 18    
+	   6 Input      2 Bit        Muxes := 7     
+	   9 Input      2 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 12    
+	   3 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	  55 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module clock 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module SYNC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
+	   4 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 5     
+	   3 Input     12 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 6     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 5     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 4     
++---Multipliers : 
+	                 6x32  Multipliers := 1     
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 5     
+	   2 Input     12 Bit        Muxes := 9     
+	   4 Input     12 Bit        Muxes := 4     
+	   8 Input     11 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 5     
+	  55 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  55 Input      3 Bit        Muxes := 13    
+	   3 Input      3 Bit        Muxes := 4     
+	  11 Input      3 Bit        Muxes := 4     
+	   4 Input      3 Bit        Muxes := 1     
+	  55 Input      2 Bit        Muxes := 29    
+	   2 Input      2 Bit        Muxes := 18    
+	   6 Input      2 Bit        Muxes := 7     
+	   9 Input      2 Bit        Muxes := 1     
+	   8 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 12    
+	   3 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	  55 Input      1 Bit        Muxes := 29    
+	   2 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "temp" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "temp2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "kinks_x" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.srcs/sources_1/new/SYNC.vhd:67]
+DSP Report: Generating DSP jump_d1, operation Mode is: A*B.
+DSP Report: operator jump_d1 is absorbed into DSP jump_d1.
+DSP Report: operator jump_d1 is absorbed into DSP jump_d1.
+DSP Report: Generating DSP jump_d1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator jump_d1 is absorbed into DSP jump_d1.
+DSP Report: operator jump_d1 is absorbed into DSP jump_d1.
+DSP Report: Generating DSP jump_d1, operation Mode is: A*B.
+DSP Report: operator jump_d1 is absorbed into DSP jump_d1.
+DSP Report: operator jump_d1 is absorbed into DSP jump_d1.
+DSP Report: Generating DSP jump_d1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator jump_d1 is absorbed into DSP jump_d1.
+DSP Report: operator jump_d1 is absorbed into DSP jump_d1.
+WARNING: [Synth 8-3331] design SYNC has unconnected port KEYS[1]
+WARNING: [Synth 8-3331] design SYNC has unconnected port KEYS[0]
+WARNING: [Synth 8-3331] design SYNC has unconnected port S[1]
+WARNING: [Synth 8-3331] design SYNC has unconnected port S[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (C1/\contact_check_reg[0,5][0] )
+INFO: [Synth 8-3886] merging instance 'C1/contact_check_reg[0,0][0]' (FDRE) to 'C1/contact_check_reg[0,5][1]'
+INFO: [Synth 8-3886] merging instance 'C1/contact_check_reg[0,5][2]' (FDRE) to 'C1/contact_check_reg[0,5][1]'
+INFO: [Synth 8-3886] merging instance 'C1/contact_check_reg[2,4][2]' (FDRE) to 'C1/contact_check_reg[0,3][2]'
+INFO: [Synth 8-3886] merging instance 'C1/contact_check_reg[0,3][2]' (FDRE) to 'C1/contact_check_reg[2,4][1]'
+INFO: [Synth 8-3886] merging instance 'C1/contact_check_reg[0,0][2]' (FDRE) to 'C1/contact_check_reg[0,5][1]'
+INFO: [Synth 8-3886] merging instance 'C1/contact_check_reg[0,5][1]' (FDRE) to 'C1/contact_check_reg[0,0][1]'
+INFO: [Synth 8-3886] merging instance 'C1/contact_check_reg[2,4][1]' (FDRE) to 'C1/contact_check_reg[0,3][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (C1/\contact_check_reg[0,3][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (C1/\contact_check_reg[0,0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (C1/\kinks_x_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (C1/hazard_x0_inferred/\hazard_x_reg[0] )
+INFO: [Synth 8-3886] merging instance 'C1/RGB_reg[0]' (FDR) to 'C1/RGB_reg[11]'
+INFO: [Synth 8-3886] merging instance 'C1/RGB_reg[1]' (FDR) to 'C1/RGB_reg[9]'
+INFO: [Synth 8-3886] merging instance 'C1/RGB_reg[2]' (FDR) to 'C1/RGB_reg[11]'
+INFO: [Synth 8-3886] merging instance 'C1/RGB_reg[3]' (FDR) to 'C1/RGB_reg[11]'
+INFO: [Synth 8-3886] merging instance 'C1/RGB_reg[4]' (FDR) to 'C1/RGB_reg[11]'
+INFO: [Synth 8-3886] merging instance 'C1/RGB_reg[5]' (FDR) to 'C1/RGB_reg[9]'
+INFO: [Synth 8-3886] merging instance 'C1/RGB_reg[6]' (FDR) to 'C1/RGB_reg[11]'
+INFO: [Synth 8-3886] merging instance 'C1/RGB_reg[7]' (FDR) to 'C1/RGB_reg[11]'
+INFO: [Synth 8-3886] merging instance 'C1/RGB_reg[8]' (FDR) to 'C1/RGB_reg[11]'
+INFO: [Synth 8-3886] merging instance 'C1/RGB_reg[10]' (FDR) to 'C1/RGB_reg[11]'
+WARNING: [Synth 8-3332] Sequential element (kinks_x_reg[0]) is unused and will be removed from module SYNC.
+WARNING: [Synth 8-3332] Sequential element (hazard_x_reg[0]) is unused and will be removed from module SYNC.
+WARNING: [Synth 8-3332] Sequential element (contact_check_reg[0,5][0]) is unused and will be removed from module SYNC.
+WARNING: [Synth 8-3332] Sequential element (contact_check_reg[0,0][1]) is unused and will be removed from module SYNC.
+WARNING: [Synth 8-3332] Sequential element (contact_check_reg[0,3][1]) is unused and will be removed from module SYNC.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 764.055 ; gain = 520.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+--------------+---------------+----------------+
+|Module Name | RTL Object   | Depth x Width | Implemented As | 
++------------+--------------+---------------+----------------+
+|SYNC        | cacti3[0,5]  | 64x1          | LUT            | 
+|SYNC        | cacti3[0,6]  | 64x1          | LUT            | 
+|SYNC        | cacti3[0,17] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,18] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,19] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,29] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,30] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,31] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,35] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,36] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,46] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,47] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,5]  | 64x1          | LUT            | 
+|SYNC        | cacti3[0,6]  | 64x1          | LUT            | 
+|SYNC        | cacti3[0,17] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,18] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,19] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,29] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,30] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,31] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,35] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,36] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,46] | 64x1          | LUT            | 
+|SYNC        | cacti3[0,47] | 64x1          | LUT            | 
++------------+--------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|SYNC        | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SYNC        | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SYNC        | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|SYNC        | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 814.789 ; gain = 571.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 841.289 ; gain = 597.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 897.461 ; gain = 653.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 897.461 ; gain = 653.781
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 897.461 ; gain = 653.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 897.461 ; gain = 653.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 897.461 ; gain = 653.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 897.461 ; gain = 653.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 897.461 ; gain = 653.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     3|
+|2     |CARRY4    |   215|
+|3     |DSP48E1   |     1|
+|4     |DSP48E1_1 |     2|
+|5     |LUT1      |   174|
+|6     |LUT2      |   427|
+|7     |LUT3      |   210|
+|8     |LUT4      |   208|
+|9     |LUT5      |   217|
+|10    |LUT6      |   538|
+|11    |MUXF7     |     4|
+|12    |MUXF8     |     1|
+|13    |FDRE      |   240|
+|14    |FDSE      |     2|
+|15    |IBUF      |     3|
+|16    |OBUF      |    15|
++------+----------+------+
+
+Report Instance Areas: 
++------+----------------+-------+------+
+|      |Instance        |Module |Cells |
++------+----------------+-------+------+
+|1     |top             |       |  2260|
+|2     |  C1            |SYNC   |  2081|
+|3     |    clock_1_map |clock  |   507|
++------+----------------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 897.461 ; gain = 653.781
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 134 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:03 . Memory (MB): peak = 897.461 ; gain = 336.906
+Synthesis Optimization Complete : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 897.461 ; gain = 653.781
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 226 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+158 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:14 . Memory (MB): peak = 897.461 ; gain = 666.590
+INFO: [Common 17-1381] The checkpoint 'C:/Users/t.anjary/Desktop/Personal Project/vcurrent/VGA_trial.runs/synth_1/VGA.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file VGA_utilization_synth.rpt -pb VGA_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 897.461 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 23 21:16:42 2018...
