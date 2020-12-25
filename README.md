@@ -7,6 +7,6 @@ So far there exist Sprites stored in a 'ROM' for the T-Rex running, ducking and 
 
 Jump physics are implemented as well, along with physics description that lets the T-Rex jump multiple times mid-air, as though it were flappy bird. This flappy-bird-jump feature may be currently commented out though. It is meant to activate upon consumption of some kind of power up or cheat code, not implemented yet.
 
-Currently compatible on BASYS3 FPGA. VGA protocols implemented as well.
+Currently compatible on BASYS3 FPGA. VGA protocols implemented as well. All VIVADO files are in /TRex_v1.6.
 
-A small java file is also given. This is what I use to convert an image(of the T-rex, for example) to a binary array, to be used as a Sprite, to be stored in the 'ROM' module.
+A small java file is also given in /Sprite Maker. This is what I use to convert an image(of the T-rex, for example) to a binary array, to be used as a Sprite, to be stored in the 'ROM' module.
